@@ -140,7 +140,7 @@ Qual é o resultado do piloto em determinado circuito em uma temporada específi
     <column id="COL40" populated="true" UUID="29939e00-595c-4860-9d8c-175fe8226313" autoIncrement="false" autoIncrementSequenceName="tb_fato_DW_codigo_piloto_seq" defaultValue="" name="codigo_piloto" nullable="1" physicalName="codigo_piloto" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL41" populated="true" UUID="fcfd4447-9c48-4b5b-a13e-d9d18d80e7c5" autoIncrement="false" autoIncrementSequenceName="tb_fato_DW_primeiro_nome_piloto_seq" defaultValue="" name="nome_piloto" nullable="0" physicalName="nome_piloto" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL41" populated="true" UUID="fcfd4447-9c48-4b5b-a13e-d9d18d80e7c5" autoIncrement="false" autoIncrementSequenceName="tb_fato_DW_primeiro_nome_piloto_seq" defaultValue="" name="primeiro_nome_piloto" nullable="0" physicalName="primeiro_nome_piloto" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
     <column id="COL42" populated="true" UUID="b701ad43-386e-4725-af55-3db2bb90f581" autoIncrement="false" autoIncrementSequenceName="tb_fato_DW_sobre_nome_piloto_seq" defaultValue="" name="sobre_nome_piloto" nullable="0" physicalName="sobre_nome_piloto" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -281,7 +281,7 @@ Qual é o resultado do piloto em determinado circuito em uma temporada específi
     <column id="COL85" populated="true" UUID="f6851381-e51d-4e67-9ab8-e6adfda16868" autoIncrement="false" autoIncrementSequenceName="tb_piloto_codigo_piloto_seq" defaultValue="" name="codigo_piloto" nullable="1" physicalName="codigo_piloto" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL86" populated="true" UUID="ff7736c7-ffb7-46da-a167-7a6d8ac22cc2" autoIncrement="false" autoIncrementSequenceName="tb_piloto_primeiro_nome_piloto_seq" defaultValue="" name="nome_piloto" nullable="0" physicalName="nome_piloto" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL86" populated="true" UUID="ff7736c7-ffb7-46da-a167-7a6d8ac22cc2" autoIncrement="false" autoIncrementSequenceName="tb_piloto_primeiro_nome_piloto_seq" defaultValue="" name="primeiro_nome_piloto" nullable="0" physicalName="primeiro_nome_piloto" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
     <column id="COL87" populated="true" UUID="7210a98d-5f11-4e5f-aa96-4ededcf18d4a" autoIncrement="false" autoIncrementSequenceName="tb_piloto_sobre_nome_piloto_seq" defaultValue="" name="sobre_nome_piloto" nullable="0" physicalName="sobre_nome_piloto" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -454,7 +454,7 @@ Qual é o resultado do piloto em determinado circuito em uma temporada específi
  <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="1.6817928305074266" viewportX="0" viewportY="784" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+ <play-pen zoom="1.6817928305074266" viewportX="2" viewportY="801" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB1" x="24" y="88" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB15" x="706" y="96" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB32" x="353" y="90" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>

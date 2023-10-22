@@ -1,0 +1,185 @@
+CREATE TABLE tb_circuito (
+                circuito_id_circuito INTEGER NOT NULL,
+                circuito_ref_circuito VARCHAR,
+                nome_circuito VARCHAR,
+                localizacao_circuito VARCHAR,
+                pais_circuito VARCHAR NOT NULL,
+                latitude_circuito REAL,
+                longitude_circuito REAL,
+                altitude_circuito REAL,
+                CONSTRAINT tb_circuito_pk PRIMARY KEY (circuito_id_circuito)
+);
+
+
+CREATE TABLE tb_corrida (
+                corrida_id_corrida INTEGER NOT NULL,
+                circuito_id_circuito INTEGER NOT NULL,
+                ano_corrida INTEGER NOT NULL,
+                rodada_corrida INTEGER,
+                nome_corrida VARCHAR,
+                data_corrida VARCHAR,
+                CONSTRAINT tb_corrida_pk PRIMARY KEY (corrida_id_corrida)
+);
+
+
+CREATE TABLE tb_construtor (
+                construtor_id_construtor INTEGER NOT NULL,
+                construtor_ref_construtor VARCHAR,
+                nome_construtor VARCHAR NOT NULL,
+                nacionalidade_construtor VARCHAR,
+                CONSTRAINT tb_construtor_pk PRIMARY KEY (construtor_id_construtor)
+);
+
+
+CREATE TABLE tb_piloto (
+                piloto_id INTEGER NOT NULL,
+                piloto_ref_piloto VARCHAR,
+                numero_piloto VARCHAR,
+                codigo_piloto VARCHAR,
+                primeiro_nome_piloto VARCHAR NOT NULL,
+                sobre_nome_piloto VARCHAR NOT NULL,
+                dt_nascimento_pilto DATE,
+                nacionalidade_piloto VARCHAR,
+                CONSTRAINT tb_piloto_pk PRIMARY KEY (piloto_id)
+);
+
+
+CREATE TABLE piloto_construtor (
+                construtor_id_construtor INTEGER NOT NULL,
+                piloto_id INTEGER NOT NULL,
+                corrida_id_resultado INTEGER NOT NULL,
+                CONSTRAINT piloto_construtor_pk PRIMARY KEY (construtor_id_construtor, piloto_id)
+);
+
+
+CREATE TABLE tb_classificacao (
+                corrida_id_classificacao INTEGER NOT NULL,
+                piloto_id_classificacao INTEGER NOT NULL,
+                vitorias_classificacao INTEGER,
+                CONSTRAINT tb_classificacao_pk PRIMARY KEY (corrida_id_classificacao, piloto_id_classificacao)
+);
+
+
+CREATE TABLE tb_resultados (
+                corrida_id_resultado INTEGER NOT NULL,
+                piloto_id_resultado INTEGER NOT NULL,
+                resultado_id INTEGER NOT NULL,
+                construtor_id_resultado INTEGER NOT NULL,
+                numero_resultado REAL,
+                grid_resultado INTEGER,
+                posicao_ordem_resultado INTEGER,
+                pontos_resultados REAL,
+                CONSTRAINT tb_resultados_pk PRIMARY KEY (corrida_id_resultado, piloto_id_resultado)
+);
+
+
+CREATE TABLE tb_resultados_classificacao (
+                corrida_id_resultado INTEGER NOT NULL,
+                piloto_id_resultado INTEGER NOT NULL,
+                corrida_id_classificacao INTEGER NOT NULL,
+                piloto_id_classificacao INTEGER NOT NULL,
+                CONSTRAINT tb_resultados_classificacao_pk PRIMARY KEY (corrida_id_resultado, piloto_id_resultado, corrida_id_classificacao, piloto_id_classificacao)
+);
+
+
+CREATE TABLE tb_corrida_circuito_DW (
+                corrida_id_corrida INTEGER NOT NULL,
+                circuito_id_circuito INTEGER NOT NULL,
+                ano_corrida INTEGER NOT NULL,
+                rodada_corrida INTEGER,
+                nome_corrida VARCHAR,
+                data_corrida VARCHAR,
+                circuito_ref_circuito VARCHAR,
+                nome_circuito VARCHAR,
+                localizacao_circuito VARCHAR,
+                pais_circuito VARCHAR NOT NULL,
+                latitude_circuito REAL,
+                longitude_circuito REAL,
+                altitude_circuito REAL,
+                CONSTRAINT tb_corrida_circuito_dw_pk PRIMARY KEY (corrida_id_corrida, circuito_id_circuito)
+);
+
+
+CREATE TABLE tb_resultado_qualificacao_classificacao_DW (
+                resultado_id_resultado INTEGER NOT NULL,
+                corrida_id_resultados INTEGER NOT NULL,
+                piloto_id_resultados INTEGER NOT NULL,
+                construtor_id_resultado VARCHAR NOT NULL,
+                numero_resultado REAL,
+                grid_resultado INTEGER,
+                posicao_ordem_resultado INTEGER,
+                pontos_resultado REAL,
+                corrida_id_classificacao INTEGER NOT NULL,
+                piloto_id_classificacao INTEGER NOT NULL,
+                vitorias_classificacao INTEGER,
+                CONSTRAINT tb_resultado_qualificacao_classificacao_dw_pk PRIMARY KEY (resultado_id_resultado)
+);
+
+
+CREATE TABLE tb_fato_DW (
+                resultado_id_resultado INTEGER NOT NULL,
+                corrida_id_corrida INTEGER NOT NULL,
+                circuito_id_circuito INTEGER NOT NULL,
+                construtor_id_construtor INTEGER NOT NULL,
+                piloto_id_piloto INTEGER NOT NULL,
+                piloto_ref_piloto VARCHAR,
+                numero_piloto VARCHAR,
+                codigo_piloto VARCHAR,
+                primeiro_nome_piloto VARCHAR NOT NULL,
+                sobre_nome_piloto VARCHAR NOT NULL,
+                dt_nascimento_piloto DATE,
+                nacionalidade_piloto VARCHAR,
+                construtor_ref_construtor VARCHAR,
+                nome_construtor VARCHAR NOT NULL,
+                nacionalidade_construtor VARCHAR,
+                CONSTRAINT tb_fato_dw_pk PRIMARY KEY (resultado_id_resultado, corrida_id_corrida, circuito_id_circuito)
+);
+
+ALTER TABLE tb_corrida ADD CONSTRAINT tb_circuito_tb_corrida_fk
+FOREIGN KEY (circuito_id_circuito)
+REFERENCES tb_circuito (circuito_id_circuito)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE piloto_construtor ADD CONSTRAINT tb_construtor_piloto_construtor_fk
+FOREIGN KEY (construtor_id_construtor)
+REFERENCES tb_construtor (construtor_id_construtor)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE piloto_construtor ADD CONSTRAINT tb_piloto_piloto_construtor_fk
+FOREIGN KEY (piloto_id)
+REFERENCES tb_piloto (piloto_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE tb_resultados_classificacao ADD CONSTRAINT tb_classificacao_tb_resultados_classificacao_fk
+FOREIGN KEY (corrida_id_classificacao, piloto_id_classificacao)
+REFERENCES tb_classificacao (corrida_id_classificacao, piloto_id_classificacao)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE tb_resultados_classificacao ADD CONSTRAINT tb_resultados_tb_resultados_classificacao_fk
+FOREIGN KEY (corrida_id_resultado, piloto_id_resultado)
+REFERENCES tb_resultados (corrida_id_resultado, piloto_id_resultado)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE tb_fato_DW ADD CONSTRAINT tb_race_tb_fato_fk
+FOREIGN KEY (corrida_id_corrida, circuito_id_circuito)
+REFERENCES tb_corrida_circuito_DW (corrida_id_corrida, circuito_id_circuito)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE tb_fato_DW ADD CONSTRAINT tb_results_tb_fato_fk
+FOREIGN KEY (resultado_id_resultado)
+REFERENCES tb_resultado_qualificacao_classificacao_DW (resultado_id_resultado)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;

@@ -1,0 +1,126 @@
+Descrição das colunas das 13 (treze) tabelas do Dataset Fórmula 1 entre os anos de 1950 – 2023 (já considerando a modelagem SQL – chaves primárias e chaves estrangeiras)
+
+1. **tb_circuits:**
+   - circuitId (PK): Identificador único para cada circuito.
+   - circuitRef: Uma referência única para o circuito.
+   - name: Nome do circuito.
+   - location: Localização do circuito.
+   - country: País onde o circuito está localizado.
+   - lat: Latitude geográfica do circuito.
+   - lng: Longitude geográfica do circuito.
+   - alt: Altitude do circuito.
+   - url: URL relacionada ao circuito.
+
+2. **tb_constructor_results:**
+   - constructorResultId (PK): Identificador único para cada resultado do construtor.
+   - raceId (FK): Chave estrangeira referenciando a tabela de corridas.
+   - constructorId (FK): Chave estrangeira referenciando a tabela de construtores.
+   - points: Pontos conquistados pelo construtor em uma corrida.
+   - status: Status do resultado.
+
+3. **tb_constructor_standings:**
+   - constructorStandingId (PK): Identificador único para a classificação do construtor.
+   - raceId (FK): Chave estrangeira referenciando a tabela de corridas.
+   - constructorId (FK): Chave estrangeira referenciando a tabela de construtores.
+   - points: Pontos acumulados pelo construtor.
+   - position: Posição na classificação geral dos construtores.
+   - positionText: Texto representando a posição.
+   - wins: Número de vitórias do construtor.
+
+4. **tb_constructor:**
+   - constructorId (PK): Identificador único para cada construtor.
+   - constructorRef: Uma referência única para o construtor.
+   - name: Nome do construtor.
+   - nationality: Nacionalidade do construtor.
+   - url: URL relacionada ao construtor.
+
+5. **tb_driver_standings:**
+   - driverStandingsId (PK): Identificador único para a classificação do piloto.
+   - raceId (FK): Chave estrangeira referenciando a tabela de corridas.
+   - driverId (FK): Chave estrangeira referenciando a tabela de pilotos.
+   - points: Pontos acumulados pelo piloto.
+   - position: Posição na classificação geral dos pilotos.
+   - positionText: Texto representando a posição.
+   - wins: Número de vitórias do piloto.
+
+6. **tb_drivers:**
+   - driverId (PK): Identificador único para cada piloto.
+   - driverRef: Uma referência única para o piloto.
+   - number: Número do piloto.
+   - code: Código do piloto.
+   - forename: Nome do piloto (primeiro nome).
+   - surname: Sobrenome do piloto.
+   - dob: Data de nascimento do piloto.
+   - nationality: Nacionalidade do piloto.
+   - url: URL relacionada ao piloto.
+
+
+7. **tb_lap_times:**
+   - raceId (FK): Chave estrangeira referenciando a tabela de corridas.
+   - driverId (FK): Chave estrangeira referenciando a tabela de pilotos.
+   - lap: Número da volta.
+   - position: Posição do piloto na volta.
+   - time: Tempo da volta.
+   - milliseconds: Tempo em milissegundos da volta.
+
+8. **tb_pit_stops:**
+   - raceId (FK): Chave estrangeira referenciando a tabela de corridas.
+   - driverId (FK): Chave estrangeira referenciando a tabela de pilotos.
+   - stop: Número da parada no pit stop.
+   - lap: Número da volta em que o pit stop ocorreu.
+   - time: Hora do pit stop.
+   - duration: Duração do pit stop.
+   - milliseconds: Duração do pit stop em milissegundos.
+
+9. **tb_qualifying:**
+   - qualifyId (PK): Identificador único para cada resultado da sessão de classificação.
+   - raceId (FK): Chave estrangeira referenciando a tabela de corridas.
+   - driverId (FK): Chave estrangeira referenciando a tabela de pilotos.
+   - constructorId (FK): Chave estrangeira referenciando a tabela de construtores.
+   - number: Número de classificação.
+   - position: Posição na sessão de classificação.
+   - q1: Tempo da primeira sessão de classificação.
+   - q2: Tempo da segunda sessão de classificação.
+   - q3: Tempo da terceira sessão de classificação.
+
+
+10. **tb_races:**
+    - raceId (PK): Identificador único para cada corrida.
+    - year: Ano da corrida.
+    - round: Rodada da corrida na temporada.
+    - circuitId (FK): Chave estrangeira referenciando a tabela de circuitos.
+    - name: Nome da corrida.
+    - date: Data da corrida.
+    - time: Hora da corrida.
+    - url: URL relacionada à corrida.
+    - fp1_date: Data da primeira sessão de treinos livres.
+    - fp1_time: Hora da primeira sessão de treinos livres.
+
+11. **tb_results:**
+    - resultId (PK): Identificador único para cada resultado da corrida.
+    - raceId (FK): Chave estrangeira referenciando a tabela de corridas.
+    - driverId (FK): Chave estrangeira referenciando a tabela de pilotos.
+    - constructorId (FK): Chave estrangeira referenciando a tabela de construtores.
+    - number: Número de classificação.
+    - grid: Posição de largada na corrida.
+    - position: Posição final na corrida.
+    - positionText: Texto representando a posição.
+    - positionOrder: Ordem de chegada na corrida.
+    - points: Pontos conquistados na corrida.
+
+12. **tb_seasons:**
+    - year: Ano da temporada.
+    - url: URL relacionada à temporada.
+
+
+
+13. **tb_sprint_results:**
+    - resultId (FK): Chave estrangeira referenciando a tabela de resultados.
+    - raceId (FK): Chave estrangeira referenciando a tabela de corridas.
+    - driverId (FK): Chave estrangeira referenciando a tabela de pilotos.
+    - constructorId (FK): Chave estrangeira referenciando a tabela de construtores.
+    - number: Número de classificação.
+    - grid: Posição de largada na corrida.
+    - position: Posição final na corrida.
+    - positionText: Texto representando a posição.
+    - positionOrder: Ordem de chegada na corrida.

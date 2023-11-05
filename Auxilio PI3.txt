@@ -1,0 +1,26 @@
+Links Relacionados a AE:
+
+F1 RedBull ( Mostra Analises filtrando o time "REDBULL", porém podemos usar alguns como base, utilizei o de podiums)
+https://www.kaggle.com/code/kash55/f1-redbull-eda
+
+F1 Data-Analysis-Aida (Usei muitos desse, porém pode ter algo que ajude)
+https://www.kaggle.com/code/aidalatollari/f1-data-analysis-aida
+
+Formula 1 Data Visualization (Pode ter algo que acrescente)
+https://www.kaggle.com/code/sanketdevhare98/formula-1-data-visualization
+
+Dados de Analise HAM x VER ( Pode ser legal usar algo, mas mais como adicionar algo no final se achar preciso)
+https://www.kaggle.com/code/carlkirstein/ham-vs-ver-2021-laps-pitstops-conversions
+
+Dados relacionados ao L.Hamilton (Se for focar em algum piloto, mas acho que nao)
+https://www.kaggle.com/code/tiagowutzke/lewis-hamilton-stats-of-a-champion
+
+MAIS ARTIGOS - > https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020/code
+
+
+Links Relacionados a ML:
+
+https://github.com/oracle-devrel/redbull-analytics-hol
+Parte onde tem algo onde podemos tentar pegar algo> https://github.com/oracle-devrel/redbull-analytics-hol/tree/main/beginners
+Video1-> https://www.youtube.com/watch?v=lBQ_NOJihPo
+Video2-> https://www.youtube.com/watch?v=drMTmZ3O62E

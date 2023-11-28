@@ -1,3 +1,12 @@
+--JOIN NA TABELA FATO
+
+SELECT * FROM tb_fato INNER 
+JOIN tb_construtor ON tb_fato.construtor_id = tb_construtor.construtor_id_construtor 
+INNER JOIN tb_circuito ON tb_fato.circuito_id = tb_circuito.circuito_id_circuito 
+INNER JOIN tb_corrida ON tb_fato.corrida_id = tb_corrida.corrida_id_corrida 
+INNER JOIN tb_piloto ON tb_fato.piloto_id = tb_piloto.piloto_id_piloto;
+
+
 -- CRIANDO AS TABELAS:
 
 DROP TABLE tb_corrida CASCADE;
@@ -70,7 +79,4 @@ CREATE TABLE tb_fato (
 		FOREIGN KEY (construtor_id) REFERENCES tb_construtor (construtor_id_construtor)
 );
 
---SELECT * FROM tb_fato;
-
---IMPORTAÇÃO DADOS DATASET:
 

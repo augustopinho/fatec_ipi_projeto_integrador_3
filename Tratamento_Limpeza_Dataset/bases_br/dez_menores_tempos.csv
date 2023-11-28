@@ -1,0 +1,11 @@
+,corrida_id,piloto_id,volta,posicao,tempo,milisegundos,ano,rodada,circuito_id,nome_x,data,hora,fp1_data,fp1_hora,fp2_data,fp2_hora,fp3_data,fp3_hora,quali_data,quali_hora,sprint_data,sprint_hora,piloto_ref,numero,codigo,nome_y,sobrenome,dt_nascimento,nacionalidade
+535302,1046,847,80,14,0:55.404,55404,2020,16,3,Sakhir Grand Prix,2020-12-06,1900-01-01 17:10:00,,,,,,,,,,,russell,63,RUS,George,Russell,1998-02-15,British
+535305,1046,847,83,12,0:56.319,56319,2020,16,3,Sakhir Grand Prix,2020-12-06,1900-01-01 17:10:00,,,,,,,,,,,russell,63,RUS,George,Russell,1998-02-15,British
+535297,1046,847,75,2,0:56.393,56393,2020,16,3,Sakhir Grand Prix,2020-12-06,1900-01-01 17:10:00,,,,,,,,,,,russell,63,RUS,George,Russell,1998-02-15,British
+535298,1046,847,76,2,0:56.442,56442,2020,16,3,Sakhir Grand Prix,2020-12-06,1900-01-01 17:10:00,,,,,,,,,,,russell,63,RUS,George,Russell,1998-02-15,British
+535306,1046,847,84,11,0:56.499,56499,2020,16,3,Sakhir Grand Prix,2020-12-06,1900-01-01 17:10:00,,,,,,,,,,,russell,63,RUS,George,Russell,1998-02-15,British
+535295,1046,847,73,2,0:56.514,56514,2020,16,3,Sakhir Grand Prix,2020-12-06,1900-01-01 17:10:00,,,,,,,,,,,russell,63,RUS,George,Russell,1998-02-15,British
+535303,1046,847,81,13,0:56.542,56542,2020,16,3,Sakhir Grand Prix,2020-12-06,1900-01-01 17:10:00,,,,,,,,,,,russell,63,RUS,George,Russell,1998-02-15,British
+535294,1046,847,72,3,0:56.563,56563,2020,16,3,Sakhir Grand Prix,2020-12-06,1900-01-01 17:10:00,,,,,,,,,,,russell,63,RUS,George,Russell,1998-02-15,British
+293688,1046,822,60,2,0:56.563,56563,2020,16,3,Sakhir Grand Prix,2020-12-06,1900-01-01 17:10:00,,,,,,,,,,,bottas,77,BOT,Valtteri,Bottas,1989-08-28,Finnish
+293687,1046,822,59,2,0:56.613,56613,2020,16,3,Sakhir Grand Prix,2020-12-06,1900-01-01 17:10:00,,,,,,,,,,,bottas,77,BOT,Valtteri,Bottas,1989-08-28,Finnish

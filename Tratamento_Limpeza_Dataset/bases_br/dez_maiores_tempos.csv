@@ -1,0 +1,11 @@
+,corrida_id,piloto_id,volta,posicao,tempo,milisegundos,ano,rodada,circuito_id,nome_x,data,hora,fp1_data,fp1_hora,fp2_data,fp2_hora,fp3_data,fp3_hora,quali_data,quali_hora,sprint_data,sprint_hora,piloto_ref,numero,codigo,nome_y,sobrenome,dt_nascimento,nacionalidade
+126854,847,2,25,4,2:05:07.547,7507547,2011,7,7,Canadian Grand Prix,2011-06-12,1900-01-01 17:00:00,,,,,,,,,,,heidfeld,,HEI,Nick,Heidfeld,1977-05-10,German
+49195,847,13,25,3,2:05:06.656,7506656,2011,7,7,Canadian Grand Prix,2011-06-12,1900-01-01 17:00:00,,,,,,,,,,,massa,19,MAS,Felipe,Massa,1981-04-25,Brazilian
+46242,847,808,25,5,2:05:06.243,7506243,2011,7,7,Canadian Grand Prix,2011-06-12,1900-01-01 17:00:00,,,,,,,,,,,petrov,,PET,Vitaly,Petrov,1984-09-08,Russian
+91535,847,155,25,2,2:05:06.095,7506095,2011,7,7,Canadian Grand Prix,2011-06-12,1900-01-01 17:00:00,,,,,,,,,,,kobayashi,10,KOB,Kamui,Kobayashi,1986-09-13,Japanese
+396,847,20,25,1,2:05:05.152,7505152,2011,7,7,Canadian Grand Prix,2011-06-12,1900-01-01 17:00:00,,,,,,,,,,,vettel,5,VET,Sebastian,Vettel,1987-07-03,German
+35230,847,17,25,7,2:05:05.034,7505034,2011,7,7,Canadian Grand Prix,2011-06-12,1900-01-01 17:00:00,,,,,,,,,,,webber,,WEB,Mark,Webber,1976-08-27,Australian
+95092,847,4,25,8,2:05:04.226,7504226,2011,7,7,Canadian Grand Prix,2011-06-12,1900-01-01 17:00:00,,,,,,,,,,,alonso,14,ALO,Fernando,Alonso,1981-07-29,Spanish
+114954,847,814,25,6,2:05:03.980,7503980,2011,7,7,Canadian Grand Prix,2011-06-12,1900-01-01 17:00:00,,,,,,,,,,,resta,,DIR,Paul,di Resta,1986-04-16,British
+214622,847,37,25,9,2:05:03.795,7503795,2011,7,7,Canadian Grand Prix,2011-06-12,1900-01-01 17:00:00,,,,,,,,,,,rosa,,DLR,Pedro,de la Rosa,1971-02-24,Spanish
+64103,847,18,25,11,2:05:03.775,7503775,2011,7,7,Canadian Grand Prix,2011-06-12,1900-01-01 17:00:00,,,,,,,,,,,button,22,BUT,Jenson,Button,1980-01-19,British
